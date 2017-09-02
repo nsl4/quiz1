@@ -1,18 +1,28 @@
 /* Quiz styles */
 
+$light_background: aliceblue;
+$font: sans-serif;
+$margin_l: 50px;
+$padd: 10px;
+
+@mixin border($border: 2px, $radius: 20px){
+    border: $border solid #064277;
+    border-radius: $radius;
+
+}
+
 header {
-    border: 2px solid #064277;
-    border-radius: 20px;
+    @include border;
     margin: 10px auto;
-    padding: 10px;
-    background-color: aliceblue;
+    padding: $padd;
+    background-color: $light_background;
     text-align: center;
 }
 
 body {
     width: 600px;
     margin: auto;
-    font-family:sans-serif;
+    font-family:$font;
     font-size: 1em;
     font-style:oblique;
     background-color: #dadadb
@@ -27,14 +37,14 @@ h1 {
     border: 2px solid #064277;
     border-radius: 20px;
     margin: 10px auto;
-    padding: 10px;
-    background-color: aliceblue;
+    padding: $padd;
+    background-color: $light_background;
 }
 
 #list{
     border: 2px solid #064277;
     border-radius: 20px;
-    background-color: aliceblue;
+    background-color: $light_background;
 }
 
 h2 {
@@ -42,12 +52,12 @@ h2 {
 }
 
 h3 {
-    margin-left: 50px;
+    margin-left: $margin_l;
     color:#58a0e0
 }
 
 ul{
-    margin-left: 50px;
+    margin-left: $margin_l;
 }
 
 p{
@@ -58,7 +68,7 @@ p{
 .samplepara {
     border: 3px solid #58a0e0;
     border-radius: 5px;
-    padding: 10px;
+    padding: $padd;
     background-color: white;
 }
 
@@ -66,7 +76,7 @@ footer {
     border: 2px solid #064277;
     border-radius: 20px;
     margin: 10px auto;
-    padding: 10px;
+    padding: $padd;
     background-color: aliceblue;
 }
 
